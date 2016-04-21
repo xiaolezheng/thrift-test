@@ -63,21 +63,21 @@ include "shared.thrift"
  * target languages.
  */
 
-namespace java com.lxz.thrift
+namespace java com.lxz.thrift.test2
 
 
 /**
  * Thrift lets you do typedefs to get pretty names for your types. Standard
  * C style here.
  */
-typedef i32 MyInteger
+#typedef i32 MyInteger
 
 /**
  * Thrift also lets you define constants for use across languages. Complex
  * types and structs are specified using JSON notation.
  */
-const i32 INT32CONSTANT = 9853
-const map<string,string> MAPCONSTANT = {'hello':'world', 'goodnight':'moon'}
+# const i32 INT32CONSTANT = 9853
+# const map<string,string> MAPCONSTANT = {'hello':'world', 'goodnight':'moon'}
 
 /**
  * You can define enums, which are just 32 bit integers. Values are optional
@@ -118,7 +118,7 @@ exception InvalidOperation {
  * Ahh, now onto the cool part, defining a service. Services just need a name
  * and can optionally inherit from another service using the extends keyword.
  */
-service Calculator extends shared.SharedService {
+service CalculatorService extends shared.PingService {
 
   /**
    * A method definition looks like C code. It has a return type, arguments,
@@ -127,19 +127,8 @@ service Calculator extends shared.SharedService {
    * field lists in struct or exception definitions.
    */
 
-   void ping(),
-
-   i32 add(1:i32 num1, 2:i32 num2),
 
    i32 calculate(1:i32 logid, 2:Work w) throws (1:InvalidOperation ouch),
-
-   /**
-    * This method has a oneway modifier. That means the client only makes
-    * a request and does not listen for any response at all. Oneway methods
-    * must be void.
-    */
-   oneway void zip()
-
 }
 
 /**

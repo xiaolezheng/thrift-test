@@ -7,3 +7,5 @@ thrift 测试, thrift rpc测试
 3. 到project目录执行 mvn package thrift插件会根据IDL文件生成对应源码文件
 4. 实现接口
 5. 启动server即可
+
+测试thrift rpc ; disruptor-thrift-rpc

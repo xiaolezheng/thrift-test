@@ -23,14 +23,14 @@
  */
 
 
-namespace java com.lxz.thrift
+namespace java com.lxz.thrift.test2
 
 
-struct SharedStruct {
-  1: i32 key
+struct PingResponse {
+  1: string key
   2: string value
 }
 
-service SharedService {
-  SharedStruct getStruct(1: i32 key)
+service PingService {
+  PingResponse ping()
 }
