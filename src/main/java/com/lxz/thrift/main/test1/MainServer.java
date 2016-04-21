@@ -15,6 +15,9 @@ import org.slf4j.LoggerFactory;
 import java.net.InetSocketAddress;
 
 /**
+ *
+ * disruptor thrift server test
+ *
  * Created by xiaolezheng on 16/4/21.
  */
 public class MainServer {

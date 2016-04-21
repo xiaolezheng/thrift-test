@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.lxz</groupId>
-  <artifactId>thrift-thrift</artifactId>
+  <artifactId>thrift-test</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>thrift-thrift</name>
+  <name>thrift-test</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -60,6 +60,17 @@
       </exclusions>
     </dependency>
 
+    <dependency>
+      <groupId>com.facebook.nifty</groupId>
+      <artifactId>nifty-core</artifactId>
+      <version>0.18.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.facebook.nifty</groupId>
+      <artifactId>nifty-client</artifactId>
+      <version>0.18.0</version>
+    </dependency>
 
   </dependencies>
 
