@@ -72,6 +72,14 @@
       <version>0.18.0</version>
     </dependency>
 
+    <!-- hbase thrift client test , 该包引用太多包 -->
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-thrift</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
