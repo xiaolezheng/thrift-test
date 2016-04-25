@@ -43,14 +43,10 @@ public class HBaseThriftClient {
             put.setRow(String.valueOf(i).getBytes());
 
             TColumnValue columnValue = new TColumnValue();
-            columnValue.setFamily("article".getBytes());
-            columnValue.setQualifier("title".getBytes());
-            columnValue.setValue(String.valueOf("thrift" + i).getBytes());
+            columnValue.setFamily("article".getBytes()).setQualifier("title".getBytes()).setValue(String.valueOf("thrift" + i).getBytes());
 
             TColumnValue columnValue1 = new TColumnValue();
-            columnValue1.setFamily("article".getBytes());
-            columnValue1.setQualifier("sn".getBytes());
-            columnValue1.setValue(String.valueOf(System.currentTimeMillis()).getBytes());
+            columnValue1.setFamily("article".getBytes()).setQualifier("sn".getBytes()).setValue(String.valueOf(System.currentTimeMillis()).getBytes());
 
             List<TColumnValue> columnValues = Lists.newArrayList(columnValue, columnValue1);
 
