@@ -38,13 +38,13 @@ public class HBaseThriftClient {
 
         ByteBuffer table = ByteBuffer.wrap("test".getBytes());
 
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 1; i < 10000; i++) {
             TPut put = new TPut();
             put.setRow(String.valueOf(i).getBytes());
 
             TColumnValue columnValue = new TColumnValue();
             columnValue.setFamily("article".getBytes());
-            columnValue.setQualifier("title,".getBytes());
+            columnValue.setQualifier("title".getBytes());
             columnValue.setValue(String.valueOf("thrift" + i).getBytes());
 
             TColumnValue columnValue1 = new TColumnValue();
@@ -60,7 +60,7 @@ public class HBaseThriftClient {
         }
 
 
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 1; i < 10000; i++) {
             TGet get = new TGet();
             get.setRow(String.valueOf(i).getBytes());
 
